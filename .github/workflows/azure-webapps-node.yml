@@ -36,14 +36,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
+    - name:"java" Set up Node.js
+      uses: "fronted"actions/setup-node@v4
+      with:"launch.json"
         node-version: ${{ env.NODE_VERSION }}
         cache: 'npm'
 
     - name: npm install, build, and test
-      run: |
+      run: "launch.json"
         npm install
         npm run build --if-present
         npm run test --if-present
